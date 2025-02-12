@@ -9,7 +9,7 @@ const login = async (username, password) => {
       password
     })
   })
-  
+
   return response.json()
 }
 
