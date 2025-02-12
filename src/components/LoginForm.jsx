@@ -1,28 +1,41 @@
-import '../styles/Login.css'
-import InputField from './InputField'
+import { useState } from 'react'
+import loginService from '../services/login'
 
-const Login = () => {
+const LoginForm = () => {
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
 
-  const login = async () => {
+  const handleUsernameChange = (event) => {
+    setUsername(event.target.value)
+  }
 
+  const handlePasswordChange = (event) => {
+    setPassword(event.target.value)
+  }
+
+  const login = async (event) => {
+    event.preventDefault()
+    const response = await loginService.login(username, password)
+    console.log(response)
   }
 
   return (
-    <div className='login-container'>
-      <h2>Log in</h2>
-
-      <form onSubmit={login}>
-        <InputField type='username' placeholder='username' />
-        <InputField type='password' placeholder='password' />
-        <button type='submit'>Log in</button>
-      </form>
-
-      <div className='signup-prompt'>
-        <a>{"Don't have an account? "}</a>
-        <a href='#'>sign up</a>
-      </div>
-    </div>
+    <form onSubmit={login}>
+      <input
+        value={username}
+        onChange={handleUsernameChange}
+        type='username'
+        placeholder='username'
+      />
+      <input
+        value={password}
+        onChange={handlePasswordChange}
+        type='password'
+        placeholder='password'
+      />
+      <button type='submit'>Log in</button>
+    </form>
   )
 }
 
-export default Login
+export default LoginForm

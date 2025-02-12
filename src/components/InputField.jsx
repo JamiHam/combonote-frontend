@@ -1,7 +1,7 @@
-const InputField = ({ type, placeholder }) => {
-
+const InputField = ({ value, type, placeholder}) => {
   return (
       <input
+        value={value}
         type={type}
         placeholder={placeholder}
         className='input-field'
