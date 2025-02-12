@@ -9,12 +9,12 @@ import userReducer from './reducers/userReducer.js'
 
 const store = configureStore({
   reducer: {
-    users: userReducer
+    user: userReducer
   }
 })
 
 store.subscribe(() => {
-  console.log(store.getState().users)
+  console.log(store.getState().user)
 })
 
 createRoot(document.getElementById('root')).render(
