@@ -1,7 +1,7 @@
-const baseUrl = 'http://localhost:3001/api/notes'
+const url = 'http://localhost:3001/api/notes'
 
 const getAll = async () => {
-  const response = await fetch(baseUrl)
+  const response = await fetch(url)
   return response.json()
 }
 
