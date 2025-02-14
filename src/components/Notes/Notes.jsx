@@ -8,12 +8,14 @@ const Notes = () => {
   const [notes, setNotes] = useState(null)
 
   useEffect(() => {
-    const getData = async () => {
+    if (!user) return
+
+    const getNotes = async () => {
       const response = await noteService.getNotesFromUser(user.username, user.token)
       setNotes(response)
     }
-    getData()
-  }, [])
+    getNotes()
+  }, [user])
 
   return (
     <NoteList notes={notes} />

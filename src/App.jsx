@@ -3,8 +3,6 @@ import Login from './components/Login/Login'
 import Home from './components/Home'
 import Notes from './components/Notes/Notes'
 
-import { useEffect } from 'react'
-
 const App = () => {
   return (
     <BrowserRouter>
