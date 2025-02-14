@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import loginService from '../services/login'
-import { setUser } from '../reducers/userReducer'
+import loginService from '../../services/login'
+import { setUser } from '../../reducers/userReducer'
 
 const LoginForm = () => {
   const dispatch = useDispatch()

@@ -1,4 +1,4 @@
-import '../styles/Login.css'
+import '../../styles/Login.css'
 import LoginForm from './LoginForm'
 
 const Login = () => {

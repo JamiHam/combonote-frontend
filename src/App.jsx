@@ -1,5 +1,5 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
-import Login from './components/Login'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import Login from './components/Login/Login'
 import Home from './components/Home'
 
 const App = () => {
