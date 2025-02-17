@@ -1,6 +1,6 @@
-const url = 'http://localhost:3001/api/notes'
+const url = 'http://localhost:3001/api/documents'
 
-const getNotesFromUser = async (username, token) => {
+const getDocumentsFromUser = async (username, token) => {
   const response = await fetch(`${url}/${username}`, {
     headers: {'Authorization': 'Bearer ' + token},
   })
@@ -11,4 +11,4 @@ const getNotesFromUser = async (username, token) => {
   return null
 }
 
-export default { getNotesFromUser }
+export default { getDocumentsFromUser }

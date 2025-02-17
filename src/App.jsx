@@ -1,7 +1,8 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Login from './components/Login/Login'
 import Home from './components/Home'
-import Notes from './components/Notes/Notes'
+import Documents from './components/Documents/Documents'
+import Table from './components/Table/Table'
 
 const App = () => {
   return (
@@ -9,7 +10,8 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<Login />} />
-        <Route path='/notes' element={<Notes />} />
+        <Route path='/documents' element={<Documents />} />
+        <Route path='/table' element={<Table />} />
       </Routes>
     </BrowserRouter>
   )
