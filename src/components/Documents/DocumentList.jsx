@@ -7,9 +7,9 @@ const DocumentList = ({ documents }) => {
 
   return (
     <ul>
-      {documents.map(document => 
-        <li key={document.id}>
-          <Link to={`/documents/${document.id}`}>{document.name}</Link>
+      {documents.map(({ id, name }) => 
+        <li key={id}>
+          <Link to={`/documents/${id}`}>{name}</Link>
         </li>
       )}
     </ul>
