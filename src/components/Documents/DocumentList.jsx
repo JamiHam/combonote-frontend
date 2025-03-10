@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 const DocumentList = ({ documents }) => {
   if (!documents) {
     return null
@@ -7,7 +9,7 @@ const DocumentList = ({ documents }) => {
     <ul>
       {documents.map(document => 
         <li key={document.id}>
-          {document.name}
+          <Link to={`/documents/${document.id}`}>{document.name}</Link>
         </li>
       )}
     </ul>
