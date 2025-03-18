@@ -6,7 +6,7 @@ import './index.css'
 import App from './App.jsx'
 
 import userReducer from './reducers/userReducer.js'
-import documentReducer from './reducers/userReducer.js'
+import documentReducer from './reducers/documentReducer.js'
 
 const store = configureStore({
   reducer: {
