@@ -6,15 +6,17 @@ import './index.css'
 import App from './App.jsx'
 
 import userReducer from './reducers/userReducer.js'
+import documentReducer from './reducers/userReducer.js'
 
 const store = configureStore({
   reducer: {
-    user: userReducer
+    user: userReducer,
+    document: documentReducer,
   }
 })
 
 store.subscribe(() => {
-  console.log(store.getState().user)
+  console.log(store.getState())
 })
 
 createRoot(document.getElementById('root')).render(
