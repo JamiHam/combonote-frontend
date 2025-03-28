@@ -25,10 +25,14 @@ const getDocument = async (id, token) => {
 }
 
 const formatTables = (document) => {
+  
   const formattedTables = []
   
   document.tables.forEach((table) => {
-    const formattedTable = []
+    const formattedTable = {
+      data: [],
+      columns: table.columns
+    }
 
     table.rows.forEach(row => {
       const formattedRow = {}
@@ -41,7 +45,7 @@ const formatTables = (document) => {
         formattedRow[data.column.name] = data.value
       })
 
-      formattedTable.push(formattedRow)
+      formattedTable.data.push(formattedRow)
     })
     formattedTables.push(formattedTable)
   })
